@@ -1,0 +1,12 @@
+sudo: false
+language: python
+python:
+  - "3.5-dev"
+  - "3.3"  
+  - "2.7"
+  - "pypy" #
+
+install:  
+  - pip install open-tamil
+script:
+  - ./unittest
