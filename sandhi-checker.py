@@ -3,7 +3,7 @@ import tamil
 
 #http://www.tamilvu.org/courses/degree/c021/c0214/html/c0214661.htm
 
-a="அங்குக் கண்டான் அந்த பையன். எத்தனை பழங்கள்?  கண்டவாறு சொன்னான், ஐந்து சிறுவர்கள், கத்தியோடு  நின்றான், கத்திகொண்டு குத்தினான், வீட்டிலிருந்து  சென்றான், கை குழந்தை,  கற்று கொடுத்தான், குரங்கு குட்டி, விறகு கடை, பொது பணி,  தேர்வு  கட்டணம், கனியை தின்றான், "+\
+a="அங்குக் கண்டான் அந்த பையன். எத்தனை பழங்கள்?  கண்டவாறு சொன்னான், கல கல,  வருக புலவரே, அழியாத கல்வி, பெரிய பெண், இன்றைய செய்தி, கற்ற சிறுவன், நல்ல பையன், கேட்ட  பாட்டு,  கேட்கின்ற பாட்டு, கேட்கும் பாட்டு, கண்டு பேசினார்,  வந்து சென்றான்,  கொன்று குவித்தான், செய்து தந்தான், பல பசு, ஐந்து சிறுவர்கள், கத்தியோடு  நின்றான், கத்திகொண்டு குத்தினான், வீட்டிலிருந்து  சென்றான், கை குழந்தை,  கற்று கொடுத்தான், குரங்கு குட்டி, விறகு கடை, பொது பணி,  தேர்வு  கட்டணம், கனியை தின்றான், "+\
 "எனக்கு கொடு, வீட்டினின்று வெளியேறினான், வர சொன்னான், என்னுடைய புத்தகம், எனது புத்தகம், குறிஞ்சி தலைவன், தேங்காய் சட்னி,  தயிர் குடம், தீரா சிக்கல், மரம் தலைவன்."
 words=tamil.utf8.get_words(a)
 mei_letters = tamil.utf8.mei_letters
@@ -17,8 +17,9 @@ mellinam_letters = tamil.utf8.mellinam_letters
 special_chars=['.',';',',',':','?']
 one_letter_words=['கை','தீ','தை','பூ','மை']
 suttu_vina=['அ','ஆ','இ','ஈ','எ','யா']
-suttu_vina_not=['அது','இது','எது','அவை','இவை','எவை','அன்று','இன்று','என்று','அத்தனை','இத்தனை','எத்தனை','அவ்வளவு','இவ்வளவு','எவ்வளவு','அவ்வாறு','இவ்வாறு','எவ்வாறு']
+suttu_vina_not=['அது','இது','எது','யாது','அவை','இவை','எவை','அன்று','இன்று','என்று','அத்தனை','இத்தனை','எத்தனை','அவ்வளவு','இவ்வளவு','எவ்வளவு','அவ்வாறு','இவ்வாறு','எவ்வாறு']
 numerals=['ஒன்று','இரண்டு','மூன்று','நான்கு','ஐந்து','ஆறு','நூறு','ஏழு','ஒன்பது','ஒரு','இரு','அறு','எழு']
+viyankol=['கற்க','நில்','கவனி','செல்','செல்க','மன்னிய','வெல்க','செப்பும்','வினாவும்','வாழ்க','ஓம்பல்','அஞ்சாமை','வாழி','வீழ்க','ஒழிக','வருக','உண்க','அருள்க','கருணைபுரிக','வருக','வாழிய','வாழியர்','வாரற்க','கூறற்க','செல்லற்க','வாரல்','செல்லல்','பகரேல்']
 fixed_list=[]
 
 
@@ -33,7 +34,8 @@ def check_sandhi(words):
             counter = counter+1
             continue
 
-    # வல்லினம் மிகா சுட்டு, வினா அடியாகத் தோன்றிய சொற்கள் - எத்தனை பழங்கள்?   
+    # வல்லினம் மிகா சுட்டு, வினா அடியாகத் தோன்றிய சொற்கள் - எத்தனை பழங்கள்?  
+    # ‘அஃறிணைப் பன்மை’ - பல பசு
         if word in suttu_vina_not:
             fixed_list.append(word)
             print("மிகா - Rule2 - " + word)
@@ -111,6 +113,129 @@ def check_sandhi(words):
                 print("மிகா - Rule10 - " + word)
                 counter = counter+1
                 continue
+
+    # வல்லினம் மிகா மென்தொடர்க் குற்றியலுகர  வினையெச்சங்கள் - ண்டு, ந்து, ன்று என முடியும் 
+    # கண்டு பேசினார்
+        if ''.join(tamil.utf8.get_letters(word)[-2:]) == 'ண்டு':            
+            fixed_list.append(word)
+            print("மிகா - Rule11 - " + word)
+            counter = counter+1
+            continue
+
+    # வந்து சென்றான்
+        if ''.join(tamil.utf8.get_letters(word)[-2:]) == 'ந்து':            
+            fixed_list.append(word)
+            print("மிகா - Rule12 - " + word)
+            counter = counter+1
+            continue
+
+    # கொன்று குவித்தான்
+        if ''.join(tamil.utf8.get_letters(word)[-2:]) == 'ன்று':            
+            fixed_list.append(word)
+            print("மிகா - Rule13 - " + word)
+            counter = counter+1
+            continue
+
+    # வல்லினம் மிகா இடைத்தொடர்க் குற்றியலுகர  வினையெச்சங்கள் - ய்து என முடியும் 
+    # செய்து தந்தான்
+        if ''.join(tamil.utf8.get_letters(word)[-2:]) == 'ய்து':            
+            fixed_list.append(word)
+            print("மிகா - Rule14 - " + word)
+            counter = counter+1
+            continue
+
+    # வல்லினம் மிகா மற்ற பெயரெச்சங்கள் - ஆத, இய, ஐய,ற்ற,ல்ல, ட்ட கின்ற, உம் ஆகிய விகுதிகள் பெற்று முடியும்  
+    # அழியாத கல்வி 
+        if ''.join(tamil.utf8.get_letters(word)[-1:]) == 'த':            
+            if (tamil.utf8.splitMeiUyir(tamil.utf8.get_letters(word)[-2])[1]) == 'ஆ':
+                fixed_list.append(word)
+                print("மிகா - Rule15 - " + word)
+                counter = counter+1
+                continue
+
+    # பெரிய பெண் 
+        if ''.join(tamil.utf8.get_letters(word)[-1:]) == 'ய':            
+            if (tamil.utf8.splitMeiUyir(tamil.utf8.get_letters(word)[-2])[1]) == 'இ':
+                fixed_list.append(word)
+                print("மிகா - Rule16 - " + word)
+                counter = counter+1
+                continue
+
+    # இன்றைய செய்தி 
+        if ''.join(tamil.utf8.get_letters(word)[-1:]) == 'ய':            
+            if (tamil.utf8.splitMeiUyir(tamil.utf8.get_letters(word)[-2])[1]) == 'ஐ':
+                fixed_list.append(word)
+                print("மிகா - Rule17 - " + word)
+                counter = counter+1
+                continue
+
+    # கற்ற சிறுவன் 
+        if ''.join(tamil.utf8.get_letters(word)[-2:]) == 'ற்ற':            
+            fixed_list.append(word)
+            print("மிகா - Rule18 - " + word)
+            counter = counter+1
+            continue
+
+    # நல்ல பையன் 
+        if ''.join(tamil.utf8.get_letters(word)[-2:]) == 'ல்ல':            
+            fixed_list.append(word)
+            print("மிகா - Rule19 - " + word)
+            counter = counter+1
+            continue
+
+    # கேட்ட  பாட்டு 
+        if ''.join(tamil.utf8.get_letters(word)[-2:]) == 'ட்ட':            
+            fixed_list.append(word)
+            print("மிகா - Rule20 - " + word)
+            counter = counter+1
+            continue
+
+    # கேட்கின்ற பாட்டு  
+        if ''.join(tamil.utf8.get_letters(word)[-3:]) == 'கின்ற':            
+            fixed_list.append(word)
+            print("மிகா - Rule21 - " + word)
+            counter = counter+1
+            continue
+
+    # கேட்கும் பாட்டு
+        if ''.join(tamil.utf8.get_letters(word)[-1:]) == 'ம்':            
+            if (tamil.utf8.splitMeiUyir(tamil.utf8.get_letters(word)[-2])[1]) == 'உ':
+                fixed_list.append(word)
+                print("மிகா - Rule22 - " + word)
+                counter = counter+1
+                continue
+
+    # வல்லினம் மிகா வியங்கோள் வினைமுற்று - வருக புலவரே
+        if word in viyankol:
+            fixed_list.append(word)
+            print("மிகா - Rule23 - " + word)
+            counter = counter+1
+            continue
+
+
+        
+        # print(word)
+        # print(words[counter + 1])
+    # வல்லினம் மிகா இரட்டைக் கிளவி, அடுக்குத்தொடர்கள் - கல கல
+        if word == words[counter + 1]:
+            fixed_list.append(word)
+            print("மிகா - Rule24 - " + word)
+            counter = counter+1
+            continue
+
+    # # வல்லினம் மிகா கள், தல் விகுதிகள் - வாக்கு கள்
+    #     if words[counter + 1] in ['கள்','தல்']:
+    #         fixed_list.append(word)
+    #         print("மிகா - Rule25 - " + word)
+    #         counter = counter+1
+    #         continue
+
+    # வல்லினம் மிகா பல, சில, ஏவல் வினை - வா கலையரசி
+        if word in ['கல', 'பல','சில','வா','எழு','போ','பார்'] :
+            fixed_list.append(word)
+            print("மிகா - Rule26 - " + word)
+            counter = counter+1
+            continue
 
     # சுட்டு, வினா அடியாகத் தோன்றிய சொற்கள் முன் வல்லினம் மிகல்   
     # 6.1.1 - அந்த பையன்
