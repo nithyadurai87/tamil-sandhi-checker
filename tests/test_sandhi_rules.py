@@ -6,7 +6,7 @@
 
 # setup the paths
 from sandhitests import PYTHON3, unittest
-from sandhi_checker import safe_splitMeiUyir, check_sandhi, sandhi_checker_file_IO, Results
+from tamilsandhi.sandhi_checker import safe_splitMeiUyir, check_sandhi, sandhi_checker_file_IO, Results
 import tamil.utf8 as utf8
 import codecs
 import os
