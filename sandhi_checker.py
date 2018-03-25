@@ -29,12 +29,18 @@ agaram_letters = tamil.utf8.agaram_letters
 uyirmei_letters = tamil.utf8.uyirmei_letters
 vallinam_letters = tamil.utf8.vallinam_letters
 mellinam_letters = tamil.utf8.mellinam_letters
+special_chars=[u'.',u';',u',',u':',u'?']
+one_letter_words=[u'கை',u'தீ',u'தை',u'பூ',u'மை']
+suttu_vina=[u'அ',u'ஆ',u'இ',u'ஈ',u'எ',u'யா']
+numerals=[u'ஒன்று',u'இரண்டு',u'மூன்று',u'நான்கு',u'ஐந்து',u'ஆறு',u'நூறு',u'ஏழு',u'ஒன்பது',u'ஒரு',u'இரு',u'அறு',u'எழு']
+viyankol=[u'கற்க',u'நில்',u'கவனி',u'செல்',u'செல்க',u'மன்னிய',u'வெல்க',u'செப்பும்',u'வினாவும்',u'வாழ்க',u'ஓம்பல்',u'அஞ்சாமை',u'வாழி',u'வீழ்க',u'ஒழிக',u'வருக',u'உண்க',u'அருள்க',u'கருணைபுரிக',u'வருக',u'வாழிய',
+u'வாழியர்',u'வாரற்க',u'கூறற்க',u'செல்லற்க',u'வாரல்',u'செல்லல்',u'பகரேல்']
 tamil_letters = tamil.utf8.tamil_letters
 sanskrit_letters = tamil.utf8.sanskrit_letters 
 sanskrit_mei_letters = tamil.utf8.sanskrit_mei_letters 
-special_chars=['.','\'',';',',',':','?','(',')','_','-','"','%','±','#','@','!','!','$','%','^','&','*','+','/','–','\\','>','<','|','}','{',']','[']
-one_letter_words=['கை','தீ','தை','பூ','மை']
-numbers=['0','1','2','3','4','5','6','7','8','9','½']
+special_chars=[u'.',u'\'',u';',u',',u':',u'?',u'(',u')',u'_',u'-',u'"',u'%',u'±',u'#',u'@',u'!',u'!',u'$',u'%',u'^',u'&',u'*',u'+',u'/',u'–',u'\\',u'>',u'<',u'|',u'}',u'{',u']',u'[']
+one_letter_words=[u'கை',u'த',u'தை',u'பூ',u'மை']
+numbers=[u'0',u'1',u'2',u'3',u'4',u'5',u'6',u'7',u'8',u'9',u'½']
 granda = [u"ஜ்",u"ஷ்", u"ஸ்",u"ஹ்"
 ,u"ஶ", 	u"ஶா", 	u"ஶி", 	u"ஶீ", u"ஶு", u"ஶூ", u"ஶெ", u"ஶே", u"ஶை", u"ஶொ", u"ஶோ", u"ஶௌ"
 ,u"ஜ"  ,u"ஜா"  ,u"ஜி"  ,u"ஜீ"  ,u"ஜு"  ,u"ஜூ"  ,u"ஜெ"  ,u"ஜே"  ,u"ஜை"  ,u"ஜொ"  ,u"ஜோ"  ,u"ஜௌ"
@@ -43,7 +49,8 @@ granda = [u"ஜ்",u"ஷ்", u"ஸ்",u"ஹ்"
 ,u"ஹ"  ,u"ஹா"  ,u"ஹி"  ,u"ஹீ"  ,u"ஹு"  ,u"ஹூ"  ,u"ஹெ"  ,u"ஹே"  ,u"ஹை"  ,u"ஹொ"  ,u"ஹோ"  ,u"ஹௌ"
 ,u"க்ஷ" ,u"க்ஷா" ,u"க்ஷி" ,u"க்ஷீ" ,u"க்ஷு" ,u"க்ஷூ" ,u"க்ஷெ" ,u"க்ஷே" ,u"க்ஷை" ,u"க்ஷொ" ,u"க்ஷோ" ,u"க்ஷௌ" ]
 english = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
-suttu_vina=[u'அ',u'இ',u'எ',u'யா',u'அந்த',u'இந்த',u'எந்த',u'அங்கு',u'இங்கு',u'எங்கு',u'ஆங்கு',u'ஈங்கு',u'யாங்கு',u'அப்படி',u'இப்படி',u'எப்படி',u'ஆண்டு',u'ஈண்டு',u'யாண்டு',u'அவ்வகை',u'இவ்வகை',u'எவ்வகை',u'அத்துணை',u'இத்துணை']
+assert( len(english) == 52 )
+suttu_vina_not=[u'அ',u'இ',u'எ',u'யா',u'அந்த',u'இந்த',u'எந்த',u'அங்கு',u'இங்கு',u'எங்கு',u'ஆங்கு',u'ஈங்கு',u'யாங்கு',u'அப்படி',u'இப்படி',u'எப்படி',u'ஆண்டு',u'ஈண்டு',u'யாண்டு',u'அவ்வகை',u'இவ்வகை',u'எவ்வகை',u'அத்துணை',u'இத்துணை']
 specific_words=[u'அது',u'இது',u'எது',u'யாது',u'அவை',u'இவை',u'எவை',u'அன்று',u'இன்று',u'என்று',u'அத்தனை',u'இத்தனை',u'எத்தனை',u'அவ்வளவு',u'இவ்வளவு',u'எவ்வளவு',u'அவ்வாறு',u'இவ்வாறு',u'எவ்வாறு',u'ஒன்று',u'இரண்டு',u'மூன்று',u'நான்கு',u'ஐந்து',u'ஆறு',u'நூறு',u'ஏழு',u'ஒன்பது',u'ஒரு',u'இரு',u'அறு',u'எழு',u'கற்க',u'நில்',u'கவனி',u'செல்',u'செல்க',u'மன்னிய',u'வெல்க',u'செப்பும்',u'வினாவும்',u'வாழ்க',u'ஓம்பல்',u'அஞ்சாமை',u'வாழி',u'வீழ்க',u'ஒழிக',u'வருக',u'உண்க',u'அருள்க',u'கருணைபுரிக',u'வருக',u'வாழிய',u'வாழியர்',u'வாரற்க',u'கூறற்க',u'செல்லற்க',u'வாரல்',u'செல்லல்',u'பகரேல்',u'கல', 'பல',u'சில',u'வா',u'எழு',u'போ',u'பார்']
 
 #buggy!
@@ -85,7 +92,6 @@ class Results:
         summary_list = [u"%s -> (%s, %s),\n"%(err.word,err.rule,err.description) for err in self.errors]
         return u"".join(summary_list)
 
-
 def check_sandhi(words):
     if not isinstance(words,list):
         words = tamil.utf8.get_words(words)
@@ -98,109 +104,10 @@ def check_sandhi(words):
         prev_word = prev_word_stack.pop()
         prev_word_stack.append(word)
         next_word = (counter+1) < len(words) and words[counter+1] or u' '
-<<<<<<< HEAD
+
         
         letters = tamil.utf8.get_letters(word)
 
-        # வல்லினம் மிகா - கடைசி வார்த்தை
-        if counter == len(words)-1:
-            print(u"மிகா - Rule1 - " + word)
-            fixed_list.append(word)
-            result.add(word,u'விதி 1',u'மிகா') 
-            break
-        # வல்லினம் மிகா - வடமொழி ஆங்கில எழுத்துக்கள் மற்றும் எண்கள்
-        if (any(i in letters for i in (granda + english + numbers))) == True:
-            fixed_list.append(word)
-            print(u"மிகா - Rule2 - " + word)
-            result.add(word,u'விதி 2',u'மிகா')
-            continue
-
-        # வல்லினம் மிகா இடங்கள்           
-        if (tamil.utf8.get_letters(word)[-1]) in (special_chars + mei_letters):
-            fixed_list.append(word)
-            print(u"மிகா - Rule3 - " + word)
-            result.add(word,u'விதி 3',u'மிகா')
-            continue
-
-        # வல்லினம் மிகா சுட்டு, வினா அடியாகத் தோன்றிய சொற்கள் - எத்தனை பழங்கள்? ; எண்ணுப்பெயர்கள் - ஐந்து சிறுவர்கள்  
-        # வியங்கோள் வினைமுற்று - வருக புலவரே ; பல, சில, ஏவல் வினை - வா கலையரசி
-        if word in specific_words:
-            fixed_list.append(word)
-            print(u"மிகா - Rule4 - " + word)
-            result.add(word,u'விதி 4',u'மிகா')
-            continue
-
-        # வல்லினம் மிகா வந்த, கண்ட, சொன்ன, வரும் என்பன  போன்ற பெயரெச்சங்களோடு படி, ஆறு என்னும் சொற்கள்- கண்டவாறு சொன்னான்  
-        if len(tamil.utf8.get_letters(word)) > 1:
-            if (tamil.utf8.get_letters(word)[0]) in [u'வ',u'க',u'சொ']:
-                if (tamil.utf8.get_letters(word)[-1]) in [u'டி',u'று']:
-                    fixed_list.append(word)
-                    print(u"மிகா - Rule5 - " + word)
-                    result.add(word,u'விதி 5',u'மிகா')
-                    continue
-
-        # 6.1.2 - ஓர் எழுத்துச் சொற்கள் முன் வல்லினம்  மிகல் - கை  குழந்தை
-        if len(tamil.utf8.get_letters(word)) == 1:
-            if  word in one_letter_words:
-                first_char_of_next_word = (words[counter + 1][0])
-                if first_char_of_next_word not in (uyir_letters + numbers + ayudha_letter + granda + special_chars + english):
-                    mei_of_first_char_of_next_word = tamil.utf8.splitMeiUyir(first_char_of_next_word)[0]
-                    if mei_of_first_char_of_next_word in vallinam_letters:                    
-                        fixed_list.append(word + mei_of_first_char_of_next_word)
-                        print(u"மிகும் - Rule1 - " + word + mei_of_first_char_of_next_word)
-                        result.add(word,u'விதி 1',u'மிகும்')
-                        continue    
-
-        # வல்லினம் மிகா ஒடு & ஓடு என உயிர் ஈறு கொண்டவை - கத்தியோடு நின்றான் 
-        if len(tamil.utf8.get_letters(word)) > 1:
-            if tamil.utf8.get_letters(word)[-2] not in (uyir_letters + numbers + ayudha_letter + granda + special_chars + english):
-                if (tamil.utf8.splitMeiUyir(tamil.utf8.get_letters(word)[-2])[1]) in [u'ஒ',u'ஓ']:
-                    if (tamil.utf8.get_letters(word)[-1]) == u'டு':
-                        fixed_list.append(word)
-                        print(u"மிகா - Rule6 - " + word)
-                        result.add(word,u'விதி 6',u'மிகா')
-                        continue
-
-        # வல்லினம் மிகா ‘கொண்டு’ என்னும் சொல்லுருபு -கத்திகொண்டு குத்தினான்
-        if ''.join(tamil.utf8.get_letters(word)[-3:]) ==  u'கொண்டு':
-            fixed_list.append(word)
-            print(u"மிகா - Rule7 - " + word)
-            result.add(word,u'விதி 7',u'மிகா')
-            continue
-
-        # வல்லினம் மிகா இல் என்பதோடு இருந்து என்னும்  சொல்லுருபு - வீட்டிலிருந்து சென்றான்  
-        if ''.join(tamil.utf8.get_letters(word)[-4:]) == u'லிருந்து':
-            fixed_list.append(word)
-            print(u"மிகா - Rule8 - " + word)
-            result.add(word,u'விதி 8',u'மிகா')
-            continue
-
-        # வல்லினம் மிகா இன் என்பதோடு நின்று என்னும் சொல்லுருபு - வீட்டினின்று வெளியேறினான் 
-        if ''.join(tamil.utf8.get_letters(word)[-3:]) == u'னின்று':
-            fixed_list.append(word)
-            print(u"மிகா - Rule9 - " + word)
-            result.add(word,u'விதி 9',u'மிகா')
-            continue
-
-        # வல்லினம் மிகா ஆறாம் வேற்றுமைக்கு உரிய அது - எனது புத்தகம்
-        if len(tamil.utf8.get_letters(word)) > 1:
-            if tamil.utf8.get_letters(word)[-2] not in (uyir_letters + numbers + ayudha_letter + granda + special_chars + english):
-                if (tamil.utf8.splitMeiUyir(tamil.utf8.get_letters(word)[-2])[1]) == u'அ':
-                    if (tamil.utf8.get_letters(word)[-1]) == u'து':
-                        fixed_list.append(word)
-                        print(u"மிகா - Rule10 - " + word)
-                        result.add(word,u'விதி 10',u'மிகா')
-                        continue
-
-        # வல்லினம் மிகா ‘உடைய’ என்னும் சொல்லுருபு- என்னுடைய புத்தகம்
-        if ''.join(tamil.utf8.get_letters(word)[-2:]) == u'டைய':  
-            if ''.join(tamil.utf8.get_letters(word)[-3]) not in (uyir_letters + numbers + ayudha_letter + granda + special_chars + english):           
-                if (tamil.utf8.splitMeiUyir(tamil.utf8.get_letters(word)[-3])[1]) == u'உ':
-                    fixed_list.append(word)
-                    print(u"மிகா - Rule11 - " + word)
-                    result.add(word,u'விதி 11',u'மிகா')
-                    continue
-=======
         # வல்லினம் மிகா இடங்கள்
         if tamil.utf8.get_letters(word)[-1] in special_chars:
             fixed_list.append(word)
@@ -240,7 +147,7 @@ def check_sandhi(words):
                 fixed_list.append(word + mei_of_first_char_of_next_word)
                 if _DEBUG: print(u"மிகும் - விதி 1 - " + word + mei_of_first_char_of_next_word)
                 result.add(word,u'விதி 1',u'மிகும்')
-                continue
+            continue
 
         # வல்லினம் மிகா ஒடு & ஓடு என உயிர் ஈறு கொண்டவை - கத்தியோடு நின்றான்
         if (safe_splitMeiUyir(tamil.utf8.get_letters(word)[-2])[1]) in [u'ஒ',u'ஓ']:
@@ -294,66 +201,11 @@ def check_sandhi(words):
             counter = counter+1
             result.add(word,u'விதி 11',u'மிகா')
             continue
->>>>>>> 7d28b806b2920bb70ecc840097d48aa3890d6558
 
         # வல்லினம் மிகா மென்தொடர்க் குற்றியலுகர  வினையெச்சங்கள் - ண்டு, ந்து, ன்று என முடியும் -கண்டு பேசினார்
         # இடைத்தொடர்க் குற்றியலுகர  வினையெச்சங்கள் - ய்து என முடியும் - செய்து தந்தான்
         if ''.join(tamil.utf8.get_letters(word)[-2:]) in [u'ண்டு',u'ந்து',u'ன்று',u'ய்து',u'ன்கு']:            
             fixed_list.append(word)
-<<<<<<< HEAD
-            print(u"மிகா - Rule12 - " + word)
-            result.add(word,u'விதி 12',u'மிகா')
-            continue
-
-        # வல்லினம் மிகா மற்ற பெயரெச்சங்கள் - இன்றி, ஆத, இய, ஐய,ற்ற,ல்ல, ட்ட ன்ற, ந்த, த்து உம் ஆகிய  விகுதிகள் பெற்று முடியும்  
-        # அழியாத கல்வி 
-        if len(tamil.utf8.get_letters(word)) > 1:
-            if ''.join(tamil.utf8.get_letters(word)[-1]) == u'த':  
-                if ''.join(tamil.utf8.get_letters(word)[-2]) not in (uyir_letters + numbers + ayudha_letter + granda + special_chars + english):           
-                    if (tamil.utf8.splitMeiUyir(tamil.utf8.get_letters(word)[-2])[1]) == u'ஆ':
-                        fixed_list.append(word)
-                        print(u"மிகா - Rule13 - " + word)
-                        result.add(word,u'விதி 13',u'மிகா')
-                        continue
-
-        # பெரிய பெண் 
-        if len(tamil.utf8.get_letters(word)) > 1:
-            if ''.join(tamil.utf8.get_letters(word)[-1]) == u'ய':  
-                if ''.join(tamil.utf8.get_letters(word)[-2]) not in (uyir_letters + numbers + ayudha_letter + granda + special_chars + english):           
-                    if (tamil.utf8.splitMeiUyir(tamil.utf8.get_letters(word)[-2])[1]) == u'இ':
-                        fixed_list.append(word)
-                        print(u"மிகா - Rule14 - " + word)
-                        result.add(word,u'விதி 14',u'மிகா')
-                        continue
-
-        # இன்றைய செய்தி 
-        if len(tamil.utf8.get_letters(word)) > 1:
-            if ''.join(tamil.utf8.get_letters(word)[-1]) == u'ய':   
-                if ''.join(tamil.utf8.get_letters(word)[-2]) not in (uyir_letters + numbers + ayudha_letter + granda + special_chars + english):          
-                    if (tamil.utf8.splitMeiUyir(tamil.utf8.get_letters(word)[-2])[1]) == u'ஐ':
-                        fixed_list.append(word)
-                        print(u"மிகா - Rule15 - " + word)
-                        result.add(word,u'விதி 15',u'மிகா')
-                        continue
-
-        # கேட்கும் பாட்டு
-        if len(tamil.utf8.get_letters(word)) > 1:
-            if ''.join(tamil.utf8.get_letters(word)[-1]) == u'ம்':  
-                if ''.join(tamil.utf8.get_letters(word)[-2]) not in (uyir_letters + numbers + ayudha_letter + granda + special_chars + english):         
-                    if (tamil.utf8.splitMeiUyir(tamil.utf8.get_letters(word)[-2])[1]) == u'உ':
-                        fixed_list.append(word)
-                        print(u"மிகா - Rule16 - " + word)
-                        result.add(word,u'விதி 16',u'மிகா')
-                        continue
-
-        if ''.join(tamil.utf8.get_letters(word)[-2:]) == u'ன்றி':  
-            if ''.join(tamil.utf8.get_letters(word)[-3]) not in (uyir_letters + numbers + ayudha_letter + granda + special_chars + english):            
-                if (tamil.utf8.splitMeiUyir(tamil.utf8.get_letters(word)[-3])[1]) == u'இ':
-                    fixed_list.append(word)
-                    print(u"மிகா - Rule17 - " + word)
-                    result.add(word,u'விதி 17',u'மிகா')
-                    continue
-=======
             if _DEBUG: print(u"மிகா - Rule12 - " + word)
             counter = counter+1
             result.add(word,u'விதி 12',u'மிகா')
@@ -403,7 +255,6 @@ def check_sandhi(words):
                 result.add(word,u'விதி 17',u'மிகா')
                 counter = counter+1
                 continue
->>>>>>> 7d28b806b2920bb70ecc840097d48aa3890d6558
 
         # கற்ற சிறுவன் 
         if ''.join(tamil.utf8.get_letters(word)[-2:]) in [u'ற்ற',u'ல்ல',u'ட்ட',u'ன்ற',u'ந்த',u'த்து',u'இனி']:            
@@ -412,7 +263,6 @@ def check_sandhi(words):
             result.add(word,u'விதி 18',u'மிகா')
             continue
 
-<<<<<<< HEAD
         # வல்லினம் மிகா மற்ற வினையெச்சங்கள் - ஆக, அன, யுற,றகு,க்கு ஆகிய  விகுதிகள் பெற்று முடியும்  
         # அழியாத கல்வி 
         if len(tamil.utf8.get_letters(word)) > 1:  
@@ -420,7 +270,7 @@ def check_sandhi(words):
                 if ''.join(tamil.utf8.get_letters(word)[-2]) not in (uyir_letters + numbers + ayudha_letter + granda + special_chars + english):             
                     if (tamil.utf8.splitMeiUyir(tamil.utf8.get_letters(word)[-2])[1]) == u'ஆ':
                         fixed_list.append(word)
-                        print(u"மிகா - Rule19 - " + word)
+                        if _DEBUG: print(u"மிகா - Rule19 - " + word)
                         result.add(word,u'விதி 19',u'மிகா')
                         continue
         if len(tamil.utf8.get_letters(word)) > 1:  
@@ -428,77 +278,38 @@ def check_sandhi(words):
                 if ''.join(tamil.utf8.get_letters(word)[-2]) not in (uyir_letters + numbers + ayudha_letter + granda + special_chars + english):               
                     if (tamil.utf8.splitMeiUyir(tamil.utf8.get_letters(word)[-2])[1]) == u'அ':
                         fixed_list.append(word)
-                        print(u"மிகா - Rule20 - " + word)
+                        if _DEBUG: print(u"மிகா - Rule20 - " + word)
                         result.add(word,u'விதி 20',u'மிகா')
                         continue
 
         if ''.join(tamil.utf8.get_letters(word)[-2:]) in [u'யுற',u'றகு',u'ற்கு',u'க்கு',u'போது']:            
                 fixed_list.append(word)
-                print(u"மிகா - Rule21 - " + word)
+                if _DEBUG: print(u"மிகா - Rule21 - " + word)
                 result.add(word,u'விதி 21',u'மிகா')
                 continue
       
-=======
-        # நல்ல பையன்
-        if u''.join(tamil.utf8.get_letters(word)[-2:]) == u'ல்ல':
-            fixed_list.append(word)
-            if _DEBUG: print(u"மிகா - Rule19 - " + word)
-            result.add(word,u'விதி 19',u'மிகா')
-            counter = counter+1
-            continue
->>>>>>> 7d28b806b2920bb70ecc840097d48aa3890d6558
-
         # வல்லினம் மிகா இரட்டைக் கிளவி, அடுக்குத்தொடர்கள் - கல கல
-        if word == words[counter + 1]:
+        if word == next_word:
             fixed_list.append(word)
-<<<<<<< HEAD
-            print(u"மிகா - Rule22 - " + word)
+            if _DEBUG: print(u"மிகா - Rule22 - " + word)
             result.add(word,u'விதி 22',u'மிகா')
             continue
-
-        # வல்லினம் மிகா கள், தல் விகுதிகள் - வாக்குகள்  வித்தியாசம் 
-        if ''.join(tamil.utf8.get_letters(word)[-2:]) in [u'கள்',u'தல்']:
-=======
-            if _DEBUG: print(u"மிகா - Rule20 - " + word)
-            result.add(word,u'விதி 20',u'மிகா')
-            counter = counter+1
-            continue
-
-        # கேட்கின்ற பாட்டு
-        if u''.join(tamil.utf8.get_letters(word)[-3:]) == u'கின்ற':
-            fixed_list.append(word)
-            if _DEBUG: print(u"மிகா - Rule21 - " + word)
-            result.add(word,u'விதி 21',u'மிகா')
-            counter = counter+1
-            continue
-
-        # கேட்கும் பாட்டு
-        if u''.join(tamil.utf8.get_letters(word)[-1:]) == u'ம்':
-            if (safe_splitMeiUyir(tamil.utf8.get_letters(word)[-2])[1]) == u'உ':
-                fixed_list.append(word)
-                if _DEBUG: print(u"மிகா - Rule22 - " + word)
-                result.add(word,u'விதி 22',u'மிகா')
-                counter = counter+1
-                continue
-
+        
         # வல்லினம் மிகா வியங்கோள் வினைமுற்று - வருக புலவரே
         if word in viyankol:
->>>>>>> 7d28b806b2920bb70ecc840097d48aa3890d6558
             fixed_list.append(word)
             if _DEBUG: print(u"மிகா - Rule23 - " + word)
             result.add(word,u'விதி 23',u'மிகா')
             continue
-
+        
         # வல்லினம் மிகா பொதுப்பெயர்கள் - மகளிர் கல்லூரி 
         if word in noun_list :   
             fixed_list.append(word)
             if _DEBUG: print(u"மிகா - Rule24 - " + word)
             result.add(word,u'விதி 24',u'மிகா')
             continue
-
-<<<<<<< HEAD
+        
         # 6.1.1 சுட்டு, வினா அடியாகத் தோன்றிய சொற்கள் முன் வல்லினம் மிகல் - அந்த பையன்          
-=======
         # # வல்லினம் மிகா கள், தல் விகுதிகள் - வாக்கு கள்
         #     if next_word in ['கள்','தல்']:
         #         fixed_list.append(word)
@@ -523,27 +334,23 @@ def check_sandhi(words):
             continue
 
         # 6.1.1 சுட்டு, வினா அடியாகத் தோன்றிய சொற்கள் முன் வல்லினம் மிகல் - அந்த பையன்
->>>>>>> 7d28b806b2920bb70ecc840097d48aa3890d6558
         if (tamil.utf8.get_letters(word)) in suttu_vina:
             if (tamil.utf8.get_letters(word)[-1]) not in mei_letters:
                 if ''.join(tamil.utf8.get_letters(word)[1:3]) == u'வ்வா':
                     fixed_list.append(word)
-<<<<<<< HEAD
-                    print(u"மிகா - Rule25 - " + word)
+                    if _DEBUG: print(u"மிகா - Rule25 - " + word)
                     result.add(word,u'விதி 25',u'மிகா')
                     continue  
                 if ''.join(tamil.utf8.get_letters(word)[-2:]) != u'டைய':
-                    first_char_of_next_word = (words[counter + 1][0])
-=======
+                    first_char_of_next_word = (next_word[0])
                     if _DEBUG: print(u"மிகா - Rule29 - " + word)
                     result.add(word,u'விதி 29',u'மிகா')
                     counter = counter+1
                     continue
                 if u''.join(tamil.utf8.get_letters(word)[-2:]) != u'டைய':
                     first_char_of_next_word = (next_word[0])
->>>>>>> 7d28b806b2920bb70ecc840097d48aa3890d6558
                     if first_char_of_next_word not in (uyir_letters + numbers + ayudha_letter + granda + special_chars + english):
-                        mei_of_first_char_of_next_word = tamil.utf8.splitMeiUyir(first_char_of_next_word)[0]
+                        mei_of_first_char_of_next_word = safe_splitMeiUyir(first_char_of_next_word)[0]
                         if mei_of_first_char_of_next_word in vallinam_letters:
                             fixed_list.append(word + mei_of_first_char_of_next_word)
                             if _DEBUG: print(u"மிகும் - Rule2 - " + word + mei_of_first_char_of_next_word)
@@ -553,14 +360,14 @@ def check_sandhi(words):
         # 6.1.3 - 1 வன்தொடர்க் குற்றியலுகரம் முன் வல்லினம் மிகல் - கற்று கொடுத்தான் 
         if len(tamil.utf8.get_letters(word)) > 1:        
             if (tamil.utf8.get_letters(word)[-2]) in vallinam_letters:
-                uyir_of_last_char = tamil.utf8.splitMeiUyir(tamil.utf8.get_letters(word)[-1])[1]
+                uyir_of_last_char = safe_splitMeiUyir(tamil.utf8.get_letters(word)[-1])[1]
                 if uyir_of_last_char == u'உ':                
-                    first_char_of_next_word = (words[counter + 1][0])
+                    first_char_of_next_word = (next_word[0])
                     if first_char_of_next_word not in (uyir_letters + numbers + ayudha_letter + granda + special_chars + english):
-                        mei_of_first_char_of_next_word = tamil.utf8.splitMeiUyir(first_char_of_next_word)[0]
+                        mei_of_first_char_of_next_word = safe_splitMeiUyir(first_char_of_next_word)[0]
                         if mei_of_first_char_of_next_word in vallinam_letters:                    
                             fixed_list.append(word + mei_of_first_char_of_next_word)   
-                            print(u"மிகும் - Rule3 - " + word + mei_of_first_char_of_next_word)
+                            if _DEBUG: print(u"மிகும் - Rule3 - " + word + mei_of_first_char_of_next_word)
                             result.add(word,u'விதி 3',u'மிகும்')
                             continue
 
@@ -690,17 +497,18 @@ def check_sandhi(words):
             if _DEBUG: print(u"மிகும் - விதி 14 - " + word + mei_of_first_char_of_next_word)
             result.add(word,u'விதி 14',u'மிகும்')
             continue
-
+        
+        rule15_letter = safe_splitMeiUyir(tamil.utf8.get_letters(word)[-1])
         # 6.1.7 - மகர இறுதி கெட்டு உயிர் ஈறாய் நிற்கும் சொற்கள் - மரம் கிளை
         # But this logic tot working for - உலகப்படம்  பார்த்து,  எடுப்பதெல்லாம் பெரிய
         # if len(tamil.utf8.get_letters(word)) > 1:
-            # if (tamil.utf8.splitMeiUyir(tamil.utf8.get_letters(word)[-1])) == u'ம்':
+            # if (safe_splitMeiUyir(tamil.utf8.get_letters(word)[-1])) == u'ம்':
             #     if ''.join(tamil.utf8.get_letters(word)[-2]) not in (uyir_letters + numbers + ayudha_letter + granda + special_chars + english):
-            #         if tamil.utf8.splitMeiUyir(tamil.utf8.get_letters(word)[-2])[1] in uyir_letters:
-            #             first_char_of_next_word = (words[counter + 1][0])
+            #         if safe_splitMeiUyir(tamil.utf8.get_letters(word)[-2])[1] in uyir_letters:
+            #             first_char_of_next_word = (next_word[0])
             #             if first_char_of_next_word not in (uyir_letters + numbers + ayudha_letter + granda):
             #                 if first_char_of_next_word not in ayudha_letter:
-            #                     mei_of_first_char_of_next_word = tamil.utf8.splitMeiUyir(first_char_of_next_word)[0]
+            #                     mei_of_first_char_of_next_word = safe_splitMeiUyir(first_char_of_next_word)[0]
             #                     if mei_of_first_char_of_next_word in vallinam_letters:                    
             #                         fixed_list.append(word[:-2] + mei_of_first_char_of_next_word)            
             #                         print(u"மிகும் - Rule16 - " + word[:-2] + mei_of_first_char_of_next_word)
