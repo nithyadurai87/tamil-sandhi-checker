@@ -545,7 +545,7 @@ def sandhi_checker_file_IO(in_path,new_path):
 def run_sandhi_checker_command_line():
     if len(sys.argv) == 1:
         try:
-            in_path = os.path.join(BASE_DIRECTORY,'Input_text.txt') #default
+            in_path = os.path.join(os.getcwd(),'Input_text.txt') #default
         except Exception as ioe:
             print(u"Usage: sandhi_checker.py <filename> {<output filename>}")
             print(u"Output will also be sent to file 'Output_text.txt' if not specified.")
@@ -554,7 +554,7 @@ def run_sandhi_checker_command_line():
         in_path = sys.argv[1]
     
     if len(sys.argv) < 3:
-        new_path = os.path.join(BASE_DIRECTORY,'Output_text.txt')
+        new_path = os.path.join(os.getcwd(),'Output_text.txt')
     else:
         new_path = sys.argv[2]
     sandhi_checker_file_IO(in_path,new_path)
