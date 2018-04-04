@@ -14,5 +14,5 @@ WINDOWS = (sys.platform.find('win') != -1)
 LINUX = not WINDOWS
 
 import tamil
-from sandhi_checker import *
+from tamilsandhi.sandhi_checker import *
 
