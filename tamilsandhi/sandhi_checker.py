@@ -95,17 +95,14 @@ class Results:
 def check_sandhi(words):
     if not isinstance(words,list):
         words = tamil.utf8.get_words(words)
-
     result = Results()
     fixed_list=[]
     prev_word_stack = [u'']
-
+    
     for counter,word in enumerate(words):
         prev_word = prev_word_stack.pop()
         prev_word_stack.append(word)
         next_word = (counter+1) < len(words) and words[counter+1] or u' '
-
-        
         letters = tamil.utf8.get_letters(word)
 
         # வல்லினம் மிகா இடங்கள்
@@ -147,6 +144,8 @@ def check_sandhi(words):
                 fixed_list.append(word + mei_of_first_char_of_next_word)
                 if _DEBUG: print(u"மிகும் - விதி 1 - " + word + mei_of_first_char_of_next_word)
                 result.add(word,u'விதி 1',u'மிகும்')
+            else:
+                fixed_list.append(word)
             continue
 
         # வல்லினம் மிகா ஒடு & ஓடு என உயிர் ஈறு கொண்டவை - கத்தியோடு நின்றான்
